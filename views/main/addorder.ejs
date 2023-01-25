@@ -1,0 +1,55 @@
+
+<div class="container mt-5 login-box" style="width: 35rem; height: 55rem;">
+    <form action="/addorder" method="POST">
+        <h1 style="color: #00FFFF;" class="text-center mt-3 container">Buyurtma Qo'shish</h1>
+        <div class="mt-5 user-box ">  
+        <input type="text" class="form-control" id="namesure" name="namesure">
+        <label for="namesure" class="form-label">Ism Familya</label>
+        </div>
+        <div class="mb-3 user-box">        
+            <input type="tel" class="form-control" id="number" name="number">
+            <label for="number" class="form-label">Telefon raqami</label>
+        </div>
+        <div class="mb-3 user-box">
+            <input type="text" class="form-control" id="adress" name="adress">
+            <label for="adress" class="form-label">Manzil</label>
+        </div>
+        <div class="mb-3 user-box">
+            <input type="date" class="form-control" id="day" name="day">
+            <label for="day" class="form-label">Kun</label>
+        </div>
+        <div class="mb-3 user-box">
+            <input type="time" class="form-control" id="time" name="time">
+            <label for="time" class="form-label">Soat</label>
+        </div>
+        <div class="mb-3 user-box">
+            <input type="text" class="form-control" id="mastername" name="mastername">
+            <label for="mastername" class="form-label">Ustaning ismi</label>
+        </div>
+        <div class="mb-3 user-box">
+            <input type="number" class="form-control" id="cost" name="cost">
+           <label for="cost" class="form-label">Narxi</label>
+        </div>
+        <div class="mb-3 user-box ">
+            <input list="ordername" name="ordername"/>
+            <datalist id="ordername">
+              <option value="Santexnik">
+              <option value="Elektirik">
+              <option value="Plotnik">
+            </datalist>
+            <label>Kim kerak:</label>
+        </div>
+        <div class="mb-3 user-box ">
+            <input list="ordertype" name="ordertype"/>
+            <datalist id="ordertype">
+              <option value="Online">
+              <option value="Telefonda">
+              <option value="Ofisga kelib">
+            </datalist>
+            <label>Buyurtma turi</label>
+            <button type="submit">Qo'shish</button>
+        </div>
+        
+    </form>
+</div>
+
