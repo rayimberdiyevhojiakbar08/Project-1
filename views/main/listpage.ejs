@@ -1,4 +1,7 @@
 <%- include('../partial/navbar') %>
+
+
+
 <table  class="table table-dark table-hover mt-5">
     <thead>
       <tr>
@@ -18,9 +21,9 @@
       </tr>
     </thead>
     <tbody>
-      <% for(let i = data.length -1; i >= 0; i--)   { %>
+      <% clients.forEach((item, index) =>  { %>
       <tr>
-        <th style="color: #00FFFF;"><%= index + 1 %></th> 
+        <th style="color: #00FFFF;"><%= index + 1 %></th>
         <td style="color: #099FFF;"><%= item.namesure %></td>
         <td style="color: #00FF00;"><%= item.number %></td>
         <td style="color: #FD1C03;"><%= item.adress %></td>
@@ -34,6 +37,6 @@
         <td><a href="/edit/<%= item.id%>" class="btn btn-success btn-sm">Tahrirlash</a></td>
         <td><a href="/delete/<%= item.id%>" class="btn btn-danger btn-sm">O'chirish</a></td>
       </tr>
-      <% } %>
+      <% }) %>
     </tbody>
   </table>

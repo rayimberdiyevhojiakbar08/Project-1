@@ -15,7 +15,7 @@ const search = new Search()
 import {Edit} from '../controllers/main.controller.js'
 const edit = new Edit();
 
-import {Delete} from '../controllers/main.controller.js'
+import  {Delete} from '../controllers/main.controller.js'
 const deletedata = new Delete();
 
 const router = new  Router();

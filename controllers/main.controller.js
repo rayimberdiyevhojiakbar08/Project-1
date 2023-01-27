@@ -1,8 +1,8 @@
 import orders from "../models/orders.model.js";
+
 class  Main {
     signInPage(req, res) {
-        let navfind = 0
-        res.render('main/signin', navfind);
+        res.render('main/signin');
     }
     signIn(req, res) {
         if(req.body.name === "Hojiakbar" && req.body.sure == "Rayimberdiyev") {
@@ -18,9 +18,8 @@ export {Main}
 
 class List {
     async listPage(req, res) {
-       const data = await orders.find()
-       res.render('main/listpage', {data});  //Ok
-        
+       const nosort = await orders.find().sort({"createdAt": -1});
+       res.render('main/listpage', { clients:nosort });  
     }
 } 
 export {List}
